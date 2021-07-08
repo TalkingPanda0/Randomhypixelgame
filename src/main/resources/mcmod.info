@@ -1,0 +1,16 @@
+[
+{
+  "modid": "randomhypixelgame",
+  "name": "Random Hypixel Game",
+  "description": "Starts a random hypixel game.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["TalkingPanda"],
+  "credits": "TalkingPanda",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
