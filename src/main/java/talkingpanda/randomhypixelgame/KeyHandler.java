@@ -1,5 +1,7 @@
 package talkingpanda.randomhypixelgame;
 
+import org.lwjgl.input.Keyboard;
+import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.util.ChatComponentText;
 import net.minecraftforge.fml.common.gameevent.InputEvent.KeyInputEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -18,7 +20,6 @@ public class KeyHandler {
 			String cmd = "/play " +  games[rand.nextInt(games.length)];
 			Minecraft.getMinecraft().thePlayer.sendChatMessage(cmd);
 			Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText("Sent " + cmd));
-			System.out.println("Sent " + cmd);
 		}
     }
 }
