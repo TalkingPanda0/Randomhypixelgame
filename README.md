@@ -3,4 +3,4 @@
 2. Download the mod from [releases](https://github.com/TalkingPanda0/Randomhypixelgame/releases)
 3. put it in .minecraft/mods
 # Usage
-you can go into a random game by pressing P (you can change it in settings) in hypixel.net
+you can go into a random game by pressing P (the key can be changed in settings) while in [hypixel](https://hypixel.net)
