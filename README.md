@@ -4,3 +4,5 @@
 3. put it in .minecraft/mods
 # Usage
 you can go into a random game by pressing P (the key can be changed in settings) while in [hypixel](https://hypixel.net)
+to remove the last game press H
+you can edit games.txt in .minecraft and press R to reload the list
