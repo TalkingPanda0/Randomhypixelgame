@@ -17,7 +17,9 @@ public class RandomHypixelGame
     public static final String MODID = "randomhypixelgame";
     public static final String VERSION = "1.0";
 	public static KeyBinding start = new KeyBinding("key.randomhypixelgame.start", Keyboard.KEY_P, "key.randomhypixelgame.category");
+	public static KeyBinding del = new KeyBinding("key.randomhypixelgame.del", Keyboard.KEY_H, "key.randomhypixelgame.category");
 	public static String[] gamesl;
+	public static String lastgame;
 	@EventHandler
     public void init(FMLInitializationEvent event)
     {	
@@ -25,6 +27,7 @@ public class RandomHypixelGame
 			Games.readGames();
 		}
 		ClientRegistry.registerKeyBinding(start);
+		ClientRegistry.registerKeyBinding(del);
 		FMLCommonHandler.instance().bus().register(new KeyHandler());
 	}
 

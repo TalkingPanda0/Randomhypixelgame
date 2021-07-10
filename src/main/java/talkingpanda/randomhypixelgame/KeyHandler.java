@@ -16,9 +16,16 @@ public class KeyHandler {
         if (RandomHypixelGame.start.isPressed())
         {
 			Random rand = new Random();
-			String cmd = "/play " +  RandomHypixelGame.gamesl[rand.nextInt(RandomHypixelGame.gamesl.length)];
+			String game = RandomHypixelGame.gamesl[rand.nextInt(RandomHypixelGame.gamesl.length)];
+			RandomHypixelGame.lastgame = game;
+			String cmd = "/play " + game;
 			Minecraft.getMinecraft().thePlayer.sendChatMessage(cmd);
 			Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText("Sent " + cmd));
 		}
+		if (RandomHypixelGame.del.isPressed())
+        {
+			Games.deleteGames(RandomHypixelGame.lastgame);
+		}
+
     }
 }
