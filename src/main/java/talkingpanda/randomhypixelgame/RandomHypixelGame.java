@@ -18,6 +18,7 @@ public class RandomHypixelGame
     public static final String VERSION = "1.0";
 	public static KeyBinding start = new KeyBinding("key.randomhypixelgame.start", Keyboard.KEY_P, "key.randomhypixelgame.category");
 	public static KeyBinding del = new KeyBinding("key.randomhypixelgame.del", Keyboard.KEY_H, "key.randomhypixelgame.category");
+	public static KeyBinding reload = new KeyBinding("key.randomhypixelgame.reload", Keyboard.KEY_R, "key.randomhypixelgame.category");
 	public static String[] gamesl;
 	public static String lastgame;
 	@EventHandler
@@ -28,6 +29,7 @@ public class RandomHypixelGame
 		}
 		ClientRegistry.registerKeyBinding(start);
 		ClientRegistry.registerKeyBinding(del);
+		ClientRegistry.registerKeyBinding(reload);
 		FMLCommonHandler.instance().bus().register(new KeyHandler());
 	}
 

@@ -20,12 +20,19 @@ public class KeyHandler {
 			RandomHypixelGame.lastgame = game;
 			String cmd = "/play " + game;
 			Minecraft.getMinecraft().thePlayer.sendChatMessage(cmd);
-			Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText("Sent " + cmd));
+			Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText("§aSent " + cmd));
 		}
 		if (RandomHypixelGame.del.isPressed())
         {
 			Games.deleteGames(RandomHypixelGame.lastgame);
+			Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText("§aDeleted " + RandomHypixelGame.lastgame));
 		}
+		if (RandomHypixelGame.reload.isPressed())
+        {
+			Games.readGames();
+			Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText("§aReloaded games"));
+		}
+
 
     }
 }
