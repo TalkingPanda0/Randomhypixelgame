@@ -26,11 +26,14 @@ public class KeyHandler {
         {
 			Games.deleteGames(RandomHypixelGame.lastgame);
 			Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText("§aDeleted " + RandomHypixelGame.lastgame));
+			Games.readGames();
 		}
 		if (RandomHypixelGame.reload.isPressed())
         {
-			Games.readGames();
-			Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText("§aReloaded games"));
+			if(Games.createGames() == 0){
+				Games.readGames();
+				Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText("§aReloaded games"));
+			}
 		}
 
 
